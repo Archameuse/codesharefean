@@ -1,7 +1,0 @@
-{
-    "version": 2,
-    "routes": [
-      { "handle": "filesystem" },
-      { "src": "/client/.*", "dest": "/client/index.html" }
-    ]
-}
