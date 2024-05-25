@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FetchService {
-  url = 'http://localhost:4300/api/codes'
+  url = 'http://codesharemean-api.vercel.app/api/codes'
   constructor(public http:HttpClient) {}
   getCodes(id:string): Observable<any> {
     return this.http.get(this.url, {params: {id}})
