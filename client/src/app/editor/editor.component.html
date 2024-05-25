@@ -1,0 +1,27 @@
+<div class="max-w-screen-md bg-primaryWhite dark:bg-primaryBlack w-screen max-h-[768px] rounded-lg  pt-2 shadow-xl h-full relative z-20 flex flex-col gap-2">
+    
+    <div class="flex-grow text-left">
+        <ngx-monaco-editor [options]="options" (ngModelChange)="codeChange()" [(ngModel)]="code" style="height: 100%; width: 100%;" class="code-editor"></ngx-monaco-editor>
+    </div>
+    <div class="w-full flex justify-between items-center pb-4 px-4">
+        <div class="flex gap-4">
+            <select (change)="langChange($event)" class="bg-primaryGray rounded-full text-smallB text-center border-r-[0.5rem] border-transparent h-fit py-2 pl-2 min-w-20">
+                <option *ngFor="let language of languages" [selected]="language.toLowerCase()===lang.toLowerCase()" >{{language}}</option>
+            </select>
+            <select [value]="theme" (change)="themeChange($event)" class="bg-primaryGray rounded-full text-smallB text-center border-r-[0.5rem] border-transparent h-fit py-2 pl-2 min-w-20">
+                <option>Light</option>
+                <option>Dark</option>
+            </select>
+        </div>
+        <div class="flex items-center gap-4">
+            <div (click)="copy()" *ngIf="id?.length" class="text-smallB flex items-center gap-2 text-[#CED6E1] font-light cursor-pointer">
+                <img draggable="false" src="assets/link.svg" class="select-none">
+                {{id}}
+            </div>
+            <button (click)="share()" class="text-medB flex items-center gap-2  transition-all text-primaryWhite px-6 py-2 rounded-full" [ngClass]="active ? 'bg-primaryBlue active:opacity-85 hover:scale-105' : 'bg-secondaryBlack cursor-default'">
+                <img alt="share" src="assets/Share.svg">
+                Share
+            </button>
+        </div>
+    </div>
+</div>
