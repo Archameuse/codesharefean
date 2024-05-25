@@ -1,9 +1,10 @@
 
-<main [ngClass]="darkModeService.darkModeSignal()" class="h-dvh flex flex-col items-center font-semibold font-outfit text-center p-4 gap-4 relative bg-[url(assets/Hero-Background-notecode.svg)] bg-cover bg-center">
+<main [ngClass]="darkModeService.darkModeSignal()" class="min-h-dvh flex flex-col items-center font-semibold font-outfit text-center p-4 gap-4 relative bg-[url(assets/Hero-Background-notecode.svg),linear-gradient(to_bottom_right,rgba(183,_135,_245,_1),rgba(116,_62,_228,_1))] bg-cover bg-center">
   <img alt="NoteCode" src="assets/NoteCodeLogo.svg" class="w-full max-w-28 mt-12 mb-8">
   <h2 class='text-smallH'>Create & Share</h2>
   <h1 class='text-bigH'>Your Code easily</h1>
+  <!-- <div class="h-[1000px] w-full"></div> -->
   <!-- <app-editor /> -->
   <router-outlet />
-  <div style="mask-image: url(/assets/wave.svg); mask-repeat: no-repeat; mask-position: center; mask-size: cover;" class="absolute bottom-0 left-0 h-[calc(150vh/3)] z-10 max-h-96 w-full bg-[linear-gradient(to_bottom_right,rgba(183,_135,_245,_1),rgba(116,_62,_228,_1))]"></div>
+  <!-- <div style="mask-image: url(/assets/wave.svg); mask-repeat: no-repeat; mask-position: center; mask-size: cover;" class="absolute bottom-0 left-0 h-[calc(150vh/3)] z-10 max-h-96 w-full bg-[linear-gradient(to_bottom_right,rgba(183,_135,_245,_1),rgba(116,_62,_228,_1))]"></div> -->
 </main>

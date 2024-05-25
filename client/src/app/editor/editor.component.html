@@ -1,4 +1,4 @@
-<div class="max-w-screen-md bg-primaryWhite dark:bg-primaryBlack w-screen max-h-[768px] rounded-lg  pt-2 shadow-xl h-full relative z-20 flex flex-col gap-2">
+<div class="max-w-screen-md bg-primaryWhite dark:bg-primaryBlack w-screen max-h-[768px] rounded-lg  pt-2 shadow-xl h-screen min-h-96 relative z-20 flex flex-col gap-2">
     
     <div class="flex-grow text-left">
         <ngx-monaco-editor [options]="options" (ngModelChange)="codeChange()" [(ngModel)]="code" style="height: 100%; width: 100%;" class="code-editor"></ngx-monaco-editor>
