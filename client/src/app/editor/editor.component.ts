@@ -36,7 +36,7 @@ export class EditorComponent implements OnInit {
   darkModeService: DarkModeService = inject(DarkModeService)
   codeService: CodeService = inject(CodeService)
   theme = this.darkModeService.darkModeSignal()==='dark'?'Dark':'Light'
-  lang = this.codeService.langSignal()??'html'
+  lang = (this.codeService.langSignal?.length&&this.codeService.langSignal()==='null')?'html':this.codeService.langSignal()
   options = {
     theme: this.theme.toLowerCase()+'-theme',
     automaticLayout: true,
